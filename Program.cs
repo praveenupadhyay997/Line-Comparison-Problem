@@ -39,6 +39,17 @@ namespace LineComparisonProblem
                 }
                 
             }
+            //Check Equality using built-In Function Equals
+            bool outputEquality = lengthLineOne.Equals(lengthLineTwo);
+            if(outputEquality)
+            {
+                Console.WriteLine("Both Lines are Equal");
+            }
+            else
+            {
+                Console.WriteLine("Both Lines are not Equal");
+            }
+            // To Check Equality of Line
             if(lengthLineOne!=lengthLineTwo)
             {
                 Console.WriteLine("Both Lines are not Equal");
@@ -57,7 +68,7 @@ namespace LineComparisonProblem
                 Console.WriteLine("Both Lines are Equal");
             }
 
-            //Length Line Comparison - Method 2 , Using Inbuilt function
+            //Length Line Comparison - Method 2 , Using Inbuilt function , CompareTo
 
             int choice = Math.Sign(lengthLineTwo.CompareTo(lengthLineOne));
             if(choice==1)
