@@ -47,6 +47,12 @@ namespace LineComparisonProblem
             return Math.Sqrt(Math.Pow(lineProperties.absiccaSecondPoint -lineProperties.absiccaFirstPoint, 2) + Math.Pow(lineProperties.ordinateSecondPoint -lineProperties.ordinateFirstPoint, 2));
         }
 
+        /// <summary>
+        /// Lengthes the compare.
+        /// In-BuiltComparator
+        /// <param name="linePropertiesOne">The line properties one.</param>
+        /// <param name="linePropertiesTwo">The line properties two.</param>
+        /// <returns></returns>
         public int lengthCompare(LineProperties linePropertiesOne, LineProperties linePropertiesTwo)
         {
             if (lengthOfLine(linePropertiesOne) > lengthOfLine(linePropertiesTwo))
