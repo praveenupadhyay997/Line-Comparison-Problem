@@ -41,7 +41,20 @@ namespace LineComparisonProblem
         {
             return Math.Sqrt(Math.Pow(absiccaSecondPoint - absiccaFirstPoint, 2) + Math.Pow(ordinateSecondPoint - ordinateFirstPoint, 2));
         }
+         
+        public double lengthOfLine(LineProperties lineProperties)
+        {
+            return Math.Sqrt(Math.Pow(lineProperties.absiccaSecondPoint -lineProperties.absiccaFirstPoint, 2) + Math.Pow(lineProperties.ordinateSecondPoint -lineProperties.ordinateFirstPoint, 2));
+        }
 
-
+        public int lengthCompare(LineProperties linePropertiesOne, LineProperties linePropertiesTwo)
+        {
+            if (lengthOfLine(linePropertiesOne) > lengthOfLine(linePropertiesTwo))
+                return 1;
+            else if (lengthOfLine(linePropertiesOne) < lengthOfLine(linePropertiesTwo))
+                return -1;
+            else
+                return 0;
+        }
     }
 }
