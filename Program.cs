@@ -42,10 +42,35 @@ namespace LineComparisonProblem
             if(lengthLineOne!=lengthLineTwo)
             {
                 Console.WriteLine("Both Lines are not Equal");
+
+                if (lengthLineOne > lengthLineTwo)
+                {
+                    Console.WriteLine("The First Line is Greater in Length.");
+                }
+                else
+                {
+                    Console.WriteLine("The Second line is Greater in length.");
+                }
             }
             else
             {
                 Console.WriteLine("Both Lines are Equal");
+            }
+
+            //Length Line Comparison - Method 2 , Using Inbuilt function
+
+            int choice = Math.Sign(lengthLineTwo.CompareTo(lengthLineOne));
+            if(choice==1)
+            {
+                Console.WriteLine("The Line Two is greater");
+            }
+            else if(choice ==-1)
+            {
+                Console.WriteLine("The Line One is greater");
+            }
+            else
+            {
+                Console.WriteLine("The Lines are Equal");
             }
         }
     }
